@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gray hat</title>
+</head>
+<body>
+    <h1><a href="https://t.me/gray_hat_uz">Gray Hat</a></h1>
+    <hr>
+    <a href="{{ url_for('uzwordlists') }}">O'zbekcha wordlistlar to'plami</a> <a href="{{ url_for('uzwordlistsdownload') }}">yuklash</a>
+    <hr>
+    <form action="{{ url_for('homepage') }}" method="post" enctype="multipart/form-data">
+        <h3>wordlistimizni boyiting</h3>
+        <input type="text" name="wordlist"> <input type="submit">
+    </form>
+    {% if message %}
+    {{ message }}
+    {% endif %}
+</body>
+</html>
