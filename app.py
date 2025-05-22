@@ -28,5 +28,4 @@ def uzwordlists():
 def uzwordlistsdownload():
     return send_file("uzbekwordlists.txt", as_attachment=True)
 
-# comment
 app.run(debug=True)
